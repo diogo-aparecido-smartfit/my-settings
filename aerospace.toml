@@ -1,0 +1,285 @@
+# AeroSpace configuration
+# Main modifier: Option + Shift (⌥⇧)
+
+config-version = 2
+
+after-startup-command = []
+
+# Start AeroSpace automatically when you log in
+start-at-login = true
+
+# Automatically reload config when saved
+auto-reload-config = true
+
+# Normalizations
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# Accordion layout padding
+accordion-padding = 30
+
+# Default layout
+default-root-container-layout = 'tiles'
+
+# Automatically choose orientation based on monitor
+default-root-container-orientation = 'auto'
+
+# Move mouse to the center of the focused monitor
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+# Automatically unhide applications hidden with Cmd+H
+automatically-unhide-macos-hidden-apps = false
+
+# Keep workspaces alive even when empty
+persistent-workspaces = [
+    "1", "2", "3", "4", "5", "6", "7", "8", "9",
+    "A", "B", "C", "D", "E", "F", "G",
+    "I", "M", "N", "O", "P", "Q", "R",
+    "S", "T", "U", "V", "W", "X", "Y", "Z"
+]
+
+on-mode-changed = []
+
+# Disable focus following the mouse
+focus-follows-mouse.enabled = false
+
+# Keyboard layout
+key-mapping.preset = 'qwerty'
+
+# Window gaps
+gaps.inner.horizontal = 0
+gaps.inner.vertical = 0
+gaps.outer.left = 0
+gaps.outer.bottom = 0
+gaps.outer.top = 0
+gaps.outer.right = 0
+
+
+# ============================================================
+# MAIN MODE
+# Main modifier: Option + Shift (⌥⇧)
+# ============================================================
+
+[mode.main.binding]
+
+    # --------------------------------------------------------
+    # LAYOUT
+    # ⌥⇧ + / → Tiles
+    # ⌥⇧ + , → Accordion
+    # --------------------------------------------------------
+
+    alt-shift-slash = 'layout tiles horizontal vertical'
+    alt-shift-comma = 'layout accordion horizontal vertical'
+
+
+    # --------------------------------------------------------
+    # FOCUS WINDOWS
+    # ⌥⇧ + H/J/K/L
+    #
+    # H ←
+    # J ↓
+    # K ↑
+    # L →
+    # --------------------------------------------------------
+
+    alt-shift-h = 'focus left'
+    alt-shift-j = 'focus down'
+    alt-shift-k = 'focus up'
+    alt-shift-l = 'focus right'
+
+
+    # --------------------------------------------------------
+    # MOVE WINDOWS
+    # ⌥⇧⌘ + H/J/K/L
+    # --------------------------------------------------------
+
+    alt-shift-cmd-h = 'move left'
+    alt-shift-cmd-j = 'move down'
+    alt-shift-cmd-k = 'move up'
+    alt-shift-cmd-l = 'move right'
+
+
+    # --------------------------------------------------------
+    # RESIZE WINDOWS
+    # ⌥⇧ + -
+    # ⌥⇧ + =
+    # --------------------------------------------------------
+
+    alt-shift-minus = 'resize smart -50'
+    alt-shift-equal = 'resize smart +50'
+
+
+    # --------------------------------------------------------
+    # WORKSPACES
+    # ⌥⇧ + Number
+    # --------------------------------------------------------
+
+    alt-shift-1 = 'workspace 1'
+    alt-shift-2 = 'workspace 2'
+    alt-shift-3 = 'workspace 3'
+    alt-shift-4 = 'workspace 4'
+    alt-shift-5 = 'workspace 5'
+    alt-shift-6 = 'workspace 6'
+    alt-shift-7 = 'workspace 7'
+    alt-shift-8 = 'workspace 8'
+    alt-shift-9 = 'workspace 9'
+
+
+    # --------------------------------------------------------
+    # LETTER WORKSPACES
+    # ⌥⇧ + Letter
+    # --------------------------------------------------------
+
+    alt-shift-a = 'workspace A'
+    alt-shift-b = 'workspace B'
+    alt-shift-c = 'workspace C'
+    alt-shift-d = 'workspace D'
+    alt-shift-e = 'workspace E'
+    alt-shift-f = 'workspace F'
+    alt-shift-g = 'workspace G'
+
+    alt-shift-i = 'workspace I'
+
+    alt-shift-m = 'workspace M'
+    alt-shift-n = 'workspace N'
+    alt-shift-o = 'workspace O'
+    alt-shift-p = 'workspace P'
+    alt-shift-q = 'workspace Q'
+    alt-shift-r = 'workspace R'
+    alt-shift-s = 'workspace S'
+    alt-shift-t = 'workspace T'
+    alt-shift-u = 'workspace U'
+    alt-shift-v = 'workspace V'
+    alt-shift-w = 'workspace W'
+    alt-shift-x = 'workspace X'
+    alt-shift-y = 'workspace Y'
+    alt-shift-z = 'workspace Z'
+
+
+    # --------------------------------------------------------
+    # MOVE WINDOW TO WORKSPACE
+    # ⌥⇧⌘ + Number
+    # --------------------------------------------------------
+
+    alt-shift-cmd-1 = 'move-node-to-workspace 1'
+    alt-shift-cmd-2 = 'move-node-to-workspace 2'
+    alt-shift-cmd-3 = 'move-node-to-workspace 3'
+    alt-shift-cmd-4 = 'move-node-to-workspace 4'
+    alt-shift-cmd-5 = 'move-node-to-workspace 5'
+    alt-shift-cmd-6 = 'move-node-to-workspace 6'
+    alt-shift-cmd-7 = 'move-node-to-workspace 7'
+    alt-shift-cmd-8 = 'move-node-to-workspace 8'
+    alt-shift-cmd-9 = 'move-node-to-workspace 9'
+
+
+    # --------------------------------------------------------
+    # MOVE WINDOW TO LETTER WORKSPACE
+    # ⌥⇧⌘ + Letter
+    # --------------------------------------------------------
+
+    alt-shift-cmd-a = 'move-node-to-workspace A'
+    alt-shift-cmd-b = 'move-node-to-workspace B'
+    alt-shift-cmd-c = 'move-node-to-workspace C'
+    alt-shift-cmd-d = 'move-node-to-workspace D'
+    alt-shift-cmd-e = 'move-node-to-workspace E'
+    alt-shift-cmd-f = 'move-node-to-workspace F'
+    alt-shift-cmd-g = 'move-node-to-workspace G'
+
+    alt-shift-cmd-i = 'move-node-to-workspace I'
+
+    alt-shift-cmd-m = 'move-node-to-workspace M'
+    alt-shift-cmd-n = 'move-node-to-workspace N'
+    alt-shift-cmd-o = 'move-node-to-workspace O'
+    alt-shift-cmd-p = 'move-node-to-workspace P'
+    alt-shift-cmd-q = 'move-node-to-workspace Q'
+    alt-shift-cmd-r = 'move-node-to-workspace R'
+    alt-shift-cmd-s = 'move-node-to-workspace S'
+    alt-shift-cmd-t = 'move-node-to-workspace T'
+    alt-shift-cmd-u = 'move-node-to-workspace U'
+    alt-shift-cmd-v = 'move-node-to-workspace V'
+    alt-shift-cmd-w = 'move-node-to-workspace W'
+    alt-shift-cmd-x = 'move-node-to-workspace X'
+    alt-shift-cmd-y = 'move-node-to-workspace Y'
+    alt-shift-cmd-z = 'move-node-to-workspace Z'
+
+
+    # --------------------------------------------------------
+    # SWITCH BETWEEN LAST WORKSPACES
+    # ⌥⇧ + TAB
+    # --------------------------------------------------------
+
+    alt-shift-tab = 'workspace-back-and-forth'
+
+
+    # --------------------------------------------------------
+    # MOVE CURRENT WORKSPACE TO NEXT MONITOR
+    # ⌥⇧⌘ + TAB
+    # --------------------------------------------------------
+
+    alt-shift-cmd-tab = 'move-workspace-to-monitor --wrap-around next'
+
+
+    # --------------------------------------------------------
+    # SERVICE MODE
+    # ⌥⇧⌘ + ;
+    # (movido do ⌥⇧+; original pra liberar essa tecla pro "Left Cycle" do Loop, ver abaixo)
+    # --------------------------------------------------------
+
+    alt-shift-cmd-semicolon = 'mode service'
+
+
+    # --------------------------------------------------------
+    # "LEFT/RIGHT CYCLE" DO LOOP
+    # ⌥⇧ + ; → move janela focada pra esquerda
+    # ⌥⇧ + ' → move janela focada pra direita
+    #
+    # No AeroSpace o preenchimento do espaço vazio já é automático
+    # (isso é o "tiles" layout fazendo o trabalho), então isso aqui
+    # serve só pra reordenar/trocar de posição as janelas, igual
+    # ao Loop fazia ao "empurrar" a janela pro lado.
+    # --------------------------------------------------------
+
+    alt-shift-semicolon = 'move left'
+    alt-shift-quote = 'move right'
+
+
+    # --------------------------------------------------------
+    # "PREVIOUS/NEXT SCREEN" DO LOOP
+    # ⌥⇧ + [ → manda a janela focada pro monitor anterior
+    # ⌥⇧ + ] → manda a janela focada pro próximo monitor
+    # --------------------------------------------------------
+
+    alt-shift-leftSquareBracket = 'move-node-to-monitor prev --wrap-around --focus-follows-window'
+    alt-shift-rightSquareBracket = 'move-node-to-monitor next --wrap-around --focus-follows-window'
+
+
+# ============================================================
+# SERVICE MODE
+# ============================================================
+
+[mode.service.binding]
+
+    # ESC → Reload config and return to main mode
+    esc = ['reload-config', 'mode main']
+
+    # R → Reset workspace layout
+    r = ['flatten-workspace-tree', 'mode main']
+
+    # F → Toggle floating / tiling
+    f = ['layout floating tiling', 'mode main']
+
+    # Backspace → Close all windows except current
+    backspace = ['close-all-windows-but-current', 'mode main']
+
+
+    # --------------------------------------------------------
+    # JOIN WINDOWS
+    #
+    # ⌥⇧ + H/J/K/L
+    # --------------------------------------------------------
+
+    alt-shift-h = ['join-with left', 'mode main']
+    alt-shift-j = ['join-with down', 'mode main']
+    alt-shift-k = ['join-with up', 'mode main']
+    alt-shift-l = ['join-with right', 'mode main']
+    alt-shift-f = 'fullscreen'
